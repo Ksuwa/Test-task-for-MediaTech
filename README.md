@@ -9,9 +9,9 @@ Add function **jsonToTable()** to your HTML file and fill desired and required p
 
 ----
 ##Properties
-* **head:** - Create tag <thead></thead> in your HTML file and add values from filled head array to <td></td> tag. Default head is empty.
+* **head:** - create tag <thead></thead> in your HTML file and add values from filled head array to <td></td> tag. Default head is empty.
 
-* **jsonProperties:** - If you want to choose certain object fields, fill  jsonProperties array. Default function take all object values.
+* **jsonProperties:** - if you want to choose certain object fields, fill  jsonProperties array. Default function take all object values.
 
 * **tableIds:** - id of HTML table in which the JSON-object coverted. Default id is *#jsonToTable*.
 
