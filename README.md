@@ -13,9 +13,9 @@ Add function **jsonToTable()** to your HTML file and fill desired and required p
 
 * **jsonProperties:** - if you want to choose certain object fields, fill  jsonProperties array. Default function take all object values.
 
-* **tableIds:** - id of HTML table in which the JSON-object coverted. Default id is *#jsonToTable*.
+* **tableId:** - id of HTML table in which the JSON-object coverted. Default id is *#jsonToTable*.
 
-* **link:** - link of JSON-file. Default it is empty. Required property.
+* **link:** - link to JSON-file. Default it is empty. Required property.
 * **addClass:** - call the function which add class to certain <td></td> tag. Function arguments:
  * index - number of Object;
  * key - property of Object;
@@ -30,14 +30,15 @@ Add function **jsonToTable()** to your HTML file and fill desired and required p
 
 ----
 ##Example
+```javascript
     jsonToTable({
 	        head: ['#', 'Имя', 'Возраст'],
 		jsonProperties: ['id', 'name', 'age'],
 		tableId: '#users',
 		link: 'users.json'
         
-		addClass: function(index, key, val, object){
-			if(key == 'id') {
+		addClass: function(index, key, val, object) {
+			if (key == 'id') {
 				return 'example';
 			}
 		},
@@ -46,14 +47,13 @@ Add function **jsonToTable()** to your HTML file and fill desired and required p
 			return object.id = 67;
 		},
 		
-		sort: function(a, b){
-			if(a.age > b.age){
+		sort: function(a, b) {
+			if (a.age > b.age) {
 				return 1;
-			}
-			else if (a.age < b.age){
+			} else if (a.age < b.age) {
 				return -1;
 			}
 			return 0;
 		} 
 	});
-
+```
