@@ -9,23 +9,23 @@ Add function **jsonToTable()** to your HTML file and fill desired and required p
 
 ----
 ##Properties
-* **head: ** - Create tag <thead></thead> in your HTML file and add values from filled head array to <td></td> tag. Default head is empty.
+* **head:** - Create tag <thead></thead> in your HTML file and add values from filled head array to <td></td> tag. Default head is empty.
 
-* **jsonProperties: ** - If you want to choose certain object fields, fill  jsonProperties array. Default function take all object values.
+* **jsonProperties:** - If you want to choose certain object fields, fill  jsonProperties array. Default function take all object values.
 
-* **tableIds: ** - id of HTML table in which the JSON-object coverted. Default id is *#jsonToTable*.
+* **tableIds:** - id of HTML table in which the JSON-object coverted. Default id is *#jsonToTable*.
 
-* **link: ** - link of JSON-file. Default it is empty. Required property.
-* **addClass: ** - call the function which add class to certain <td></td> tag. Function arguments:
+* **link:** - link of JSON-file. Default it is empty. Required property.
+* **addClass:** - call the function which add class to certain <td></td> tag. Function arguments:
  * index - number of Object;
  * key - property of Object;
  * val - value of Object;
  * object - data-Object.
 
-* **processing: ** - call the function for object pre-processing. Function arguments:
+* **processing:** - call the function for object pre-processing. Function arguments:
  * object - data-Object;
 
-* **sort: ** - call the function of a comparator that sorts an array of objects transmitted. Function arguments:
+* **sort:** - call the function of a comparator that sorts an array of objects transmitted. Function arguments:
  * a, b - Objects which are compared.
 
 ----
