@@ -32,11 +32,8 @@ Add function **jsonToTable()** to your HTML file and fill desired and required p
 ##Example
     jsonToTable({
 	        head: ['#', 'Имя', 'Возраст'],
-		
 		jsonProperties: ['id', 'name', 'age'],
-		
 		tableId: '#users',
-		
 		link: 'users.json'
         
 		addClass: function(index, key, val, object){
