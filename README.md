@@ -17,9 +17,9 @@ Add function **jsonToTable()** to your HTML file and fill desired and required p
 
 * **link: ** - link of JSON-file. Default it is empty. Required property.
 * **addClass: ** - call the function which add class to certain <td></td> tag. Function arguments:
- * index - number(-s) of Object;
- * key - property(-ies) of Object;
- * val - value(-es) of Object;
+ * index - number of Object;
+ * key - property of Object;
+ * val - value of Object;
  * object - data-Object.
 
 * **processing: ** - call the function for object pre-processing. Function arguments:
@@ -32,8 +32,11 @@ Add function **jsonToTable()** to your HTML file and fill desired and required p
 ##Example
     jsonToTable({
 	        head: ['#', 'Имя', 'Возраст'],
+		
 		jsonProperties: ['id', 'name', 'age'],
+		
 		tableId: '#users',
+		
 		link: 'users.json'
         
 		addClass: function(index, key, val, object){
@@ -47,11 +50,13 @@ Add function **jsonToTable()** to your HTML file and fill desired and required p
 		},
 		
 		sort: function(a, b){
-				if(a.age > b.age){
-					return 1;
-				}
-				else if (a.age < b.age){
-					return -1;
-				}
-				return 0;} });
+			if(a.age > b.age){
+				return 1;
+			}
+			else if (a.age < b.age){
+				return -1;
+			}
+			return 0;
+		} 
+	});
 
