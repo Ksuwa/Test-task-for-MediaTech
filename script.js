@@ -54,12 +54,13 @@ function jsonToTable(options) {
 				};
 
 				if (settings.addClass instanceof Function) {	// Check if addClass is a function
-					var customCssClass = settings.addClass(index + 1, key, val, valueObj);	//Call addClass
+					var customCssClass = settings.addClass(index + 1, key, val, valueObj); //Call addClass
+				 if(typeof customCssClass == 'string') {	//Check if function return string
 					$tbody.find('tr:last').append('<td class="' + customCssClass + '">' + val + '</td>');
-				} else {
+				 } else {
 					$tbody.find('tr:last').append('<td>' + val + '</td>');	//If addClass is empty write <td> without class
 				}
-			});
+			}});
 		});
 	})
 };

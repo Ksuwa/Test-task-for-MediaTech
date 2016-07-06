@@ -9,13 +9,13 @@ Add function **jsonToTable()** to your HTML file and fill desired and required p
 
 ----
 ##Properties
-* **head: ** - Create tag <thead></thead> in your HTML file and add values from filled head array to <td></td> tag. Defoult head is empty.
+* **head: ** - Create tag <thead></thead> in your HTML file and add values from filled head array to <td></td> tag. Default head is empty.
 
-* **jsonProperties: ** - If you want to choose certain object fields, fill  jsonProperties array. Defoult function take all object values.
+* **jsonProperties: ** - If you want to choose certain object fields, fill  jsonProperties array. Default function take all object values.
 
-* **tableIds: ** - id of HTML table in which the JSON-object coverted. Defoult id is *#jsonToTable*.
+* **tableIds: ** - id of HTML table in which the JSON-object coverted. Default id is *#jsonToTable*.
 
-* **link: ** - link of JSON-file. Defoult it is empty. Required property.
+* **link: ** - link of JSON-file. Default it is empty. Required property.
 * **addClass: ** - call the function which add class to certain <td></td> tag. Function arguments:
  * index - number(-s) of Object;
  * key - property(-ies) of Object;
@@ -26,7 +26,7 @@ Add function **jsonToTable()** to your HTML file and fill desired and required p
  * object - data-Object;
 
 * **sort: ** - call the function of a comparator that sorts an array of objects transmitted. Function arguments:
- * a, b - array which are compared.
+ * a, b - Objects which are compared.
 
 ----
 ##Example
@@ -35,6 +35,23 @@ Add function **jsonToTable()** to your HTML file and fill desired and required p
 		jsonProperties: ['id', 'name', 'age'],
 		tableId: '#users',
 		link: 'users.json'
-            addClass: function(index, key, val, object){},
-		processing: function(object) {},
-		sort: function(a, b){} });
+        
+		addClass: function(index, key, val, object){
+			if(key == 'id') {
+				return 'example';
+			}
+		},
+		
+		processing: function(object) {
+			return object.id = 67;
+		},
+		
+		sort: function(a, b){
+				if(a.age > b.age){
+					return 1;
+				}
+				else if (a.age < b.age){
+					return -1;
+				}
+				return 0;} });
+
