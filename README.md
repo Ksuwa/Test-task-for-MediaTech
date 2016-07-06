@@ -31,29 +31,29 @@ Add function **jsonToTable()** to your HTML file and fill desired and required p
 ----
 ##Example
 ```javascript
-    jsonToTable({
-	        head: ['#', 'Имя', 'Возраст'],
-		jsonProperties: ['id', 'name', 'age'],
-		tableId: '#users',
-		link: 'users.json'
-        
-		addClass: function(index, key, val, object) {
-			if (key == 'id') {
-				return 'example';
-			}
-		},
-		
-		processing: function(object) {
-			return object.id = 67;
-		},
-		
-		sort: function(a, b) {
-			if (a.age > b.age) {
-				return 1;
-			} else if (a.age < b.age) {
-				return -1;
-			}
-			return 0;
-		} 
-	});
+jsonToTable({
+    head: ['#', 'Имя', 'Возраст'],
+    jsonProperties: ['id', 'name', 'age'],
+    tableId: '#users',
+    link: 'users.json'
+    
+    addClass: function(index, key, val, object) {
+        if (key == 'id') {
+            return 'example';
+        }
+    },
+    
+    processing: function(object) {
+        return object.id = 67;
+    },
+    
+    sort: function(a, b) {
+        if (a.age > b.age) {
+            return 1;
+        } else if (a.age < b.age) {
+            return -1;
+        }
+        return 0;
+    } 
+});
 ```
