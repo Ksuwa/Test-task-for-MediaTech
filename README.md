@@ -35,7 +35,7 @@ jsonToTable({
     head: ['#', 'Имя', 'Возраст'],
     jsonProperties: ['id', 'name', 'age'],
     tableId: '#users',
-    link: 'users.json'
+    link: 'users.json',
     
     addClass: function(index, key, val, object) {
         if (key == 'id') {
